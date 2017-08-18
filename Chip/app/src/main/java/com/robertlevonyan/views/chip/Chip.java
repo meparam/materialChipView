@@ -310,6 +310,9 @@ public class Chip extends RelativeLayout {
         chipTextView.setId(TEXT_ID);
 
         this.addView(chipTextView);
+
+        this.requestLayout();
+        this.invalidate();
     }
 
     private void initBackgroundColor() {
@@ -347,6 +350,7 @@ public class Chip extends RelativeLayout {
 
     public void setChipText(String chipText) {
         this.chipText = chipText;
+
     }
 
     public boolean isHasIcon() {
